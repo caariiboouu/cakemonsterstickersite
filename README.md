@@ -1,54 +1,42 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Gatsby Starter eCommerce
 
-## 🚀 Quick start
+Gatsby starter for creating an eCommerce site using [Moltin eCommerce Api ](https://moltin.com/).
 
-1.  **Create a Gatsby site.**
+This starter adapts an [existing](https://github.com/moltin-examples/nextjs-demo-store) NextJS eCommerce starter for [GatsbyJS](https://www.gatsbyjs.org/).
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+Demo: <https://parmsang.github.io/gatsby-starter-ecommerce/>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+This starter originally used Gatsby v1 and has now been updated to v2. The original version can be found in branch "gatsby-v1".
 
-2.  **Start developing.**
+## Getting started
 
-    Navigate into your new site’s directory and start it up.
+Install this starter (assuming Gatsby is installed) by running from your CLI:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+`gatsby new gatsby-store https://github.com/parmsang/gatsby-starter-ecommerce`
 
-3.  **Open the code and start customizing!**
+### Running in development
 
-    Your site is now running at http://localhost:8000!
+`npm run develop`
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+### Additional Setup
 
-4.  **Learn more**
+Both a moltin and Stripe account are needed for this store to run successfully.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Create a `.env.development` and `.env.production` file at the project root with your moltin `client_id` and Stripe test `publishable key`.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```dosini
+MOLTIN_CLIENT_ID=
+STRIPE_PUBLISHABLE_KEY=
+```
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Features
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- Moltin eCommerce API
+- React 16
+- PWA (includes manifest.webmanifest & offline support)
+- Eslint & Prettier
+- Styled Components
+- Google Analytics - (you enter the tracking-id)
+- Semantic-UI
+- Authentication via Moltin (Login and Register)
+- Stripe checkout
